@@ -1,0 +1,119 @@
+{
+  "val_accuracy": 0.7085889570552147,
+  "val_macro_recall": 0.43245540878874217,
+  "val_macro_f1": 0.4314152666688262,
+  "test_accuracy": 0.700548081714001,
+  "test_macro_recall": 0.40005903840639595,
+  "test_macro_f1": 0.40485054861796727,
+  "selection_metric": "val_accuracy_guarded",
+  "min_macro_f1_for_selection": 0.4,
+  "class_bias": [
+    0.0,
+    0.0,
+    -0.10000000149011612,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "test_accuracy_no_bias": 0.6985550572994519,
+  "test_accuracy_merged_01_secondary": 0.7179870453413054,
+  "majority_class_baseline_accuracy": 0.5291479820627802,
+  "confusion_matrix": [
+    [
+      928,
+      0,
+      4,
+      96,
+      34,
+      0
+    ],
+    [
+      35,
+      0,
+      2,
+      9,
+      5,
+      0
+    ],
+    [
+      12,
+      0,
+      53,
+      48,
+      3,
+      0
+    ],
+    [
+      61,
+      0,
+      22,
+      338,
+      17,
+      0
+    ],
+    [
+      147,
+      0,
+      0,
+      58,
+      87,
+      0
+    ],
+    [
+      47,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "full"
+  ],
+  "excluded_buckets": [],
+  "under_prediction_rate": 0.19083208769307425,
+  "over_prediction_rate": 0.10861983059292477,
+  "test_per_class_precision": {
+    "0": 0.7544715447154472,
+    "1": 0.0,
+    "2": 0.654320987654321,
+    "3": 0.6156648451730419,
+    "4": 0.5918367346938775,
+    "full": 0.0
+  },
+  "test_per_class_recall": {
+    "0": 0.8738229755178908,
+    "1": 0.0,
+    "2": 0.45689655172413796,
+    "3": 0.771689497716895,
+    "4": 0.2979452054794521,
+    "full": 0.0
+  },
+  "test_per_class_f1": {
+    "0": 0.8097731239092496,
+    "1": 0.0,
+    "2": 0.5380710659898477,
+    "3": 0.684903748733536,
+    "4": 0.39635535307517084,
+    "full": 0.0
+  },
+  "class_counts": {
+    "0": 1062,
+    "1": 51,
+    "2": 116,
+    "3": 438,
+    "4": 292,
+    "full": 48
+  },
+  "selection_criterion": "val_accuracy_guarded",
+  "class_weighting_mode": null,
+  "oversample_minority_classes": true,
+  "loss": "ordinal",
+  "ordinal_lambda": 0.5
+}

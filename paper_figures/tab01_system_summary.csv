@@ -1,0 +1,5 @@
+System,Edits,Valid %,Fallback %,First-try %,Median ms,Mean ms,Mean verts,Touched frac %,Mean retries
+Full recompute,2025,94.86,0.00,100.00,3.54,5.63,29.70,11.68,0.00
+Fixed r=2,2025,94.86,58.02,0.15,30.27,54.91,44.35,18.34,2.51
+Majority r=0,2025,94.91,68.05,31.01,6.39,11.05,27.85,10.97,2.05
+RPI hop-shell,2025,94.91,67.60,31.46,48.34,99.16,27.96,11.07,2.04

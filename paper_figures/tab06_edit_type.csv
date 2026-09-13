@@ -1,0 +1,9 @@
+Edit type,System,n,Fallback %,First-try %,Median ms,Mean verts,Valid %
+shrink_list,Full recompute,1244,0.00,100.00,3.53,10.25,94.86
+shrink_list,Fixed r=2,1244,31.67,0.24,13.25,31.91,94.86
+shrink_list,Majority r=0,1244,47.99,50.48,4.02,6.50,94.94
+shrink_list,RPI hop-shell,1244,47.27,51.21,40.11,6.65,94.94
+remove_vertex,Full recompute,781,0.00,100.00,3.57,60.69,94.88
+remove_vertex,Fixed r=2,781,100.00,0.00,81.12,64.18,94.88
+remove_vertex,Majority r=0,781,100.00,0.00,16.96,61.85,94.88
+remove_vertex,RPI hop-shell,781,100.00,0.00,144.60,61.90,94.88

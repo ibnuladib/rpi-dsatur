@@ -1,0 +1,6 @@
+Metric,If the method works,"Observed (seed 0, holdout)"
+Validity,0 conflicts for all systems,~94.9% success; failures match full (104 vs 103 infeasible)
+Wall-clock,RPI < full; RPI ≤ fixed,Fail: RPI median 48.3 ms vs full 3.5 vs fixed 30.3
+Vertices touched,RPI < full,Pass vs full (27.96 < 29.70) and vs fixed (27.96 ≪ 44.35); ties majority (27.85)
+Radius accuracy,≫ majority-class baseline,Pass: 70.05% vs 52.91%
+Fallback,<15%,"Fail: RPI 67.6%, fixed 58.0%, majority 68.0%"

@@ -1,0 +1,3 @@
+System,Edits,Valid %,Fallback %,First-try %,Median ms,Mean ms,IQR ms,Mean verts
+Full recompute,160,88.75,0.00,100.00,42.02,48.29,41.08–42.93,173.01
+RPI hop-shell,160,88.75,69.38,30.63,105.61,226.58,76.18–166.04,154.88

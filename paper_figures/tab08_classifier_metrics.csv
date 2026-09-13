@@ -1,0 +1,12 @@
+Metric,Value
+Test n,2007
+6-class accuracy,0.7005
+Majority-class baseline,0.5291
+Δ vs majority (pp),17.14
+Macro recall,0.4001
+Macro F1,0.4049
+Under-prediction rate,0.1908
+Over-prediction rate,0.1086
+"Merged-{0,1} (secondary)",0.7180
+Selection,val_accuracy_guarded
+Loss,ordinal λ=0.5

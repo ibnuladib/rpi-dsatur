@@ -1,0 +1,31 @@
+model:
+  hidden_dim: 64
+  num_layers: 4
+  dropout: 0.2
+  conv_type: gatv2
+  gat_heads: 4        # new, optional -- defaults to 4 if omitted
+  pooling: hop_shell  # Fallback A (IMPLEMENTATION.md §7): mean-pool per hop shell d=0..4; default "mean"
+train:
+  # Sampler kept; class weights off. Sampler + sqrt_inv_freq together
+  # over-fired "1" and "full" (see lab log 13.5). lr 1e-3 (1e-5 collapsed).
+  lr: 0.001
+  batch_size: 32
+  max_epochs: 80
+  patience: 20        # was 15; val acc is noisier than macro-F1 (IMPLEMENTATION.md §6)
+  class_weighting: none
+  # Ordinal CE+MAE kept per IMPLEMENTATION.md §6 keep-table: buckets are
+  # ordered; far-apart leaks (true-4→0: 138, true-full→0: 31) should cost
+  # more than adjacent mistakes. Sampler kept; do not pair with class weights.
+  loss: ordinal
+  ordinal_lambda: 0.5
+  oversample_minority_classes: true
+  excluded_buckets: []
+  # Experiment: decision-rule alignment (IMPLEMENTATION.md §4-§5)
+  selection_metric: val_accuracy_guarded   # was implicitly val_macro_f1
+  min_macro_f1_for_selection: 0.40         # collapse guard; below current 0.466
+  tune_class_bias: true                    # post-hoc per-class logit bias fit on val
+data:
+  labels_path: data/labels/labels.pt
+  split: [0.70, 0.15, 0.15]
+  split_by: graph_id
+seed: 0

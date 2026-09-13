@@ -1,0 +1,9 @@
+Gap,Status
+5-seed Wilcoxon,Missing — seed 0 only
+n=300 extra size,Not generated
+72% 6-class accuracy,Not met (deployed 70.05%)
+Wall-clock win vs full,Not observed at n≤500 or OOD n=2000
+n=2000 OOD RPI vs full,Ran: 8×20; RPI median 105.6 vs 42.0 ms
+Class-1 / full recall,0.000 on sequential test
+Real / geometric topologies,Synthetic ER only
+results/raw_outcomes.jsonl,Do not mix — different RPI

@@ -1,0 +1,9 @@
+Comparison,Metric,n pairs,n ≠0,Median Δ,Mean Δ,p,r_rb
+RPI − full,time_ms,2025,2025,+42.62 ms,+93.53 ms,<1e-300,-1.00
+RPI − full,vertices,2025,274,+0.00,-1.74,1.5e-05,-0.30
+RPI − fixed r=2,time_ms,2025,2025,+29.95 ms,+44.25 ms,1.4e-299,-0.95
+RPI − fixed r=2,vertices,2025,668,+0.00,-16.39,3.1e-74,-0.81
+RPI − majority,time_ms,2025,2025,+42.30 ms,+88.11 ms,<1e-300,-0.99
+RPI − majority,vertices,2025,15,+0.00,+0.11,0.053,-0.57
+OOD RPI − full,time_ms,160,160,+60.09 ms,+178.30 ms,4.3e-24,-0.92
+OOD RPI − full,vertices,160,31,+0.00,-18.13,0.173,-0.28

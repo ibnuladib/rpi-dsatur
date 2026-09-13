@@ -1,0 +1,89 @@
+{
+  "experiment": "n=2000 OOD RPI hop-shell vs full recompute",
+  "date": "2026-09-04",
+  "ood": true,
+  "protocol": "results/matrix_n2000_protocol.json",
+  "outcomes": "results/matrix_n2000_rpi_vs_full.jsonl",
+  "checkpoint": "model/checkpoints/radius_gnn_hopshell.pt",
+  "model_config": "model/config.yaml",
+  "device": "cuda",
+  "eval_seed": 0,
+  "n_graphs": 8,
+  "num_edits": 20,
+  "n_pairs": 160,
+  "graphs": [
+    "n2000_s2000001",
+    "n2000_s2000003",
+    "n2000_s2000004",
+    "n2000_s2000005",
+    "n2000_s2000007",
+    "n2000_s2000008",
+    "n2000_s2000009",
+    "n2000_s2000010"
+  ],
+  "generation": {
+    "family": "ER G(n,p)",
+    "n": 2000,
+    "target_avg_degree": 7.0,
+    "p": "7/(n-1)",
+    "graph_base_seed": 0,
+    "edit_stream_seed": 0,
+    "initial_dsatur_infeasible": "3 of first 10 generated; kept 8 feasible (added s2000010)"
+  },
+  "full_recompute": {
+    "n": 160,
+    "valid": 0.8875,
+    "fallback": 0.0,
+    "first_try": 1.0,
+    "median_ms": 42.0229,
+    "mean_ms": 48.2868,
+    "q1_ms": 41.0795,
+    "q3_ms": 42.9308,
+    "median_verts": 0.0,
+    "mean_verts": 173.0125,
+    "mean_attempts": 0.0
+  },
+  "rpi_dsatur": {
+    "n": 160,
+    "valid": 0.8875,
+    "fallback": 0.69375,
+    "first_try": 0.30625,
+    "median_ms": 105.6094,
+    "mean_ms": 226.5831,
+    "q1_ms": 76.1830,
+    "q3_ms": 166.0412,
+    "median_verts": 0.0,
+    "mean_verts": 154.8813,
+    "mean_attempts": 2.08125
+  },
+  "validity": {
+    "disagree_pairs": 0,
+    "both_invalid": 18,
+    "interpretation": "Same 18 infeasible-after-edit failures on both systems; not an RPI merge bug."
+  },
+  "wilcoxon_rpi_minus_full": {
+    "time_ms": {
+      "n_pairs": 160,
+      "n_nonzero": 160,
+      "median_diff": 60.0944,
+      "mean_diff": 178.2962,
+      "p": 4.2891053883405756e-24,
+      "W": 497.0,
+      "rpi_slower_count": 142,
+      "rpi_faster_count": 18
+    },
+    "vertices_touched": {
+      "n_pairs": 160,
+      "n_nonzero": 31,
+      "n_ties": 129,
+      "median_diff": 0.0,
+      "mean_diff": -18.13125,
+      "p": 0.17315895870950015,
+      "W": 178.5,
+      "rpi_more_touched": 12,
+      "rpi_fewer_touched": 19
+    }
+  },
+  "rpi_beat_full_on_time": false,
+  "note": "Do not mix with results/raw_outcomes.jsonl. Holdout n=100/200/500 from matrix_static_systems.jsonl + matrix_rpi_hopshell.jsonl."
+}

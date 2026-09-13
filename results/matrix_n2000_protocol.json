@@ -1,0 +1,35 @@
+{
+  "pre_registration": {
+    "question": "Does hop-shell RPI-DSATUR beat full recompute on wall-clock at n=2000?",
+    "ood": true,
+    "ood_note": "GNN trained on n in {100,200,500}. n=2000 is out of distribution. Flagged per evaluation_spec 2.5.",
+    "systems": ["full_recompute", "rpi_dsatur"],
+    "secondary_systems_skipped": ["fixed_radius", "majority"],
+    "n": 2000,
+    "target_avg_degree": 7.0,
+    "p": "7.0 / (n-1)",
+    "n_graphs_target": 8,
+    "n_graphs_kept": 8,
+    "graph_ids": [
+      "n2000_s2000001",
+      "n2000_s2000003",
+      "n2000_s2000004",
+      "n2000_s2000005",
+      "n2000_s2000007",
+      "n2000_s2000008",
+      "n2000_s2000009",
+      "n2000_s2000010"
+    ],
+    "n_graphs_generated_before_filter": 11,
+    "num_edits": 20,
+    "eval_seed": 0,
+    "graph_base_seed": 0,
+    "edit_stream_seed": 0,
+    "checkpoint": "model/checkpoints/radius_gnn_hopshell.pt",
+    "model_config": "model/config.yaml",
+    "pairing": "same graphs and sequential edit streams for both systems",
+    "validity": "same independent checker as Section 8 matrix (check_validity via *_step)",
+    "downsample_rationale": "Full 45-graph x 45-edit matrix at n=2000 is too expensive. Prefer fewer graphs over breaking pairing. 8 graphs x 20 edits x 1 seed.",
+    "fallback_if_oom": "retry at n=1000 with the same protocol"
+  }
+}
