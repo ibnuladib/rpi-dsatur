@@ -1,7 +1,4 @@
-"""Generate all final_spec Part-2 figures/tables to results/figures and results/tables.
-
-Also used as the executable core behind notebooks/results_analysis.ipynb.
-"""
+"""Rebuild results/figures and results/tables from the saved matrix JSONLs."""
 
 from __future__ import annotations
 

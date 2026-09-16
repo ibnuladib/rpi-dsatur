@@ -185,14 +185,14 @@ def main():
     parser.add_argument("--systems", nargs="+", default=["full_recompute", "fixed_radius", "rpi_dsatur"])
     parser.add_argument("--sizes", nargs="+", type=int, default=[100, 200, 500])
     parser.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2, 3, 4])
-    parser.add_argument("--model-checkpoint", type=str, default="model/checkpoints/radius_gnn.pt")
+    parser.add_argument("--model-checkpoint", type=str, default="model/checkpoints/radius_gnn_hopshell.pt")
     parser.add_argument("--model-config", type=str, default="model/config.yaml",
                          help="The config.yaml that produced --model-checkpoint. Must match "
                               "(hidden_dim/num_layers/conv_type/etc.) or loading will fail.")
-    parser.add_argument("--out", type=str, default="results/raw_outcomes.jsonl")
+    parser.add_argument("--out", type=str, default="results/matrix_out.jsonl")
     parser.add_argument("--graphs-dir", type=str, default="data/raw/graphs")
     parser.add_argument("--edits-dir", type=str, default="data/raw/edits")
-    parser.add_argument("--test-graph-ids-path", type=str, default="model/reports/test_graph_ids.json")
+    parser.add_argument("--test-graph-ids-path", type=str, default="model/reports/hop_shell/test_graph_ids.json")
     parser.add_argument(
         "--skip-holdout-filter",
         action="store_true",

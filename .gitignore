@@ -29,6 +29,10 @@ htmlcov/
 data/labels/*.pt
 *.pt.bak
 
+# Run logs
+logs/
+*.log
+
 # OS
 Thumbs.db
 ehthumbs.db
