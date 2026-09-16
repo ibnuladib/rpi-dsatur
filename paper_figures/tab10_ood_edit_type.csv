@@ -1,5 +1,0 @@
-Edit type,System,n,Fallback %,First-try %,Median ms,Mean verts
-shrink_list,Full recompute,99,0.00,100.00,41.68,61.53
-shrink_list,RPI hop-shell,99,50.51,49.49,85.82,20.70
-remove_vertex,Full recompute,61,0.00,100.00,42.41,353.95
-remove_vertex,RPI hop-shell,61,100.00,0.00,165.17,372.66

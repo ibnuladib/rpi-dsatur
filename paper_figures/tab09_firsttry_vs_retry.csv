@@ -1,3 +1,0 @@
-Subset,Edits,Median ms,Mean ms,Mean verts,Fallback %,Valid %
-First-try (attempts=0),637,36.88,37.49,0.52,0.00,100.00
-Retried (attempts>0),1388,72.49,127.46,40.55,98.63,92.58
